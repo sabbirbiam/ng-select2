@@ -1,20 +1,106 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div class="text-center container">
+  <div class="row">
+    <div class="col-md-6">
+      <label>Your first ng-select</label>
+      <ng-select [items]="cities" bindLabel="name" placeholder="Select city" [(ngModel)]="selectedCity">
+      </ng-select>
+      <p>
+        Selected city: {{selectedCity | json}}
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- <hr /> -->
+
+<!-- <label>Multiselect with custom bindings</label>
+        <ng-select [items]="cities2"
+                   bindLabel="name"
+                   bindValue="id"
+                   [multiple]="true"
+                   placeholder="Select cities"
+                   [(ngModel)]="selectedCityIds">
+        </ng-select>
+        <p>
+            Selected cities: {{selectedCityIds}}
+        </p>
+        <hr />
+        
+        <label>Custom tags</label>
+        <ng-select [items]="users"
+                   bindLabel="name"
+                   bindValue="id"
+                   [addTag]="addCustomUser"
+                   [multiple]="true"
+                   placeholder="Select user or add custom tag"
+                   [(ngModel)]="selectedUserIds">
+        </ng-select>
+        <p>
+            Selected user: {{selectedUserIds}}
+        </p>
+        <hr />
+        
+        <label>Custom templates</label>
+        <ng-select [items]="cities3"
+                   bindLabel="name"
+                   bindValue="name"
+                   placeholder="Select city"
+                   [(ngModel)]="selectedCityName">
+            <ng-template ng-header-tmp>
+              Custom header
+            </ng-template>
+            <ng-template ng-label-tmp let-item="item">
+                <img height="15" width="15" [src]="item.avatar"/>
+                <b>{{item.name}}</b> is cool
+            </ng-template>
+            <ng-template ng-option-tmp let-item="item" let-index="index">
+                <img height="15" width="15" [src]="item.avatar"/>
+                <b>{{item.name}}</b>
+            </ng-template>
+            <ng-template ng-footer-tmp>
+              Custom footer
+            </ng-template>
+        </ng-select>
+        <p>
+            Selected city: {{selectedCityName}}
+        </p>
+        <hr />
+        
+        <label>Hight performance. Handles even 10000 items.</label>
+        <ng-select [items]="cities4"
+                   [virtualScroll]="true"
+                   bindLabel="name"
+                   bindValue="id"
+                   placeholder="Select city"
+                   [(ngModel)]="selectedCityId">
+        </ng-select>
+        <p>
+            Selected city ID: {{selectedCityId}}
+        </p>
+        <hr />
+        
+        <label>Append dropdown to body</label>
+        <ng-select [items]="cities4"
+                   bindLabel="name"
+                   [virtualScroll]="true"
+                   bindValue="id"
+                   appendTo="body"
+                   placeholder="Select city"
+                   [(ngModel)]="selectedCityId">
+        </ng-select>
+        <p>
+            Selected city ID: {{selectedCityId}}
+        </p>
+        <hr />
+        
+        <label>Grouping</label>
+        <ng-select [items]="accounts"
+                bindLabel="name"
+                bindValue="name"
+                groupBy="country"
+                [(ngModel)]="selectedAccount">
+        </ng-select> -->
+
+<div style="margin-top:300px"></div>
