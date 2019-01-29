@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
+import { Logs } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-root',
@@ -60,7 +61,6 @@ export class AppComponent {
   constructor() {
     this.create10kCities();
   }
-
   addCustomUser = (term) => ({ id: term, name: term });
 
   private create10kCities() {
@@ -70,4 +70,15 @@ export class AppComponent {
         name: `city ${val}`
       }));
   }
+
+  onChange() {
+    console.log('selectedCity', this.selectedCity);
+  }
+
+  startsWithSearchFn(item, term) {
+    console.log('In the component', term);
+    
+    return item.startsWith(term);
+    
+}
 }

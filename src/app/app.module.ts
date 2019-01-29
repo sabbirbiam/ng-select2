@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule, FormsModule, NgSelectModule 
+    BrowserModule, FormsModule, NgSelectModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
