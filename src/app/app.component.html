@@ -4,7 +4,7 @@
                    bindLabel="name"
                    placeholder="Select city"
                    [(ngModel)]="selectedCity"
-                   [searchFn]="startsWithSearchFn">
+                   [clearable]="false">
         </ng-select>
         <p>
             Selected city: {{selectedCity | json}}
@@ -70,7 +70,8 @@
                    bindLabel="name"
                    bindValue="id"
                    placeholder="Select city"
-                   [(ngModel)]="selectedCityId">
+                   [(ngModel)]="selectedCityId"
+                   [clearable]="false">
         </ng-select>
         <p>
             Selected city ID: {{selectedCityId}}
